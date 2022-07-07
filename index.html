@@ -4,12 +4,13 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Anthony Diaz - Links</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" href="./index.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
 	<script>
 		window.addEventListener('DOMContentLoaded', () => {
-			VANTA.NET({
+			VANTA.BIRDS({
 				el: "#vanta",
 				mouseControls: true,
 				touchControls: true,
@@ -17,8 +18,25 @@
 				minHeight: 200.00,
 				minWidth: 200.00,
 				scale: 1.00,
-				scaleMobile: 1.00
+				scaleMobile: 1.00,
+				color1: 0x2810e1,
+				color2: 0xd1b4ed,
+				colorMode: "lerpGradient",
+				birdSize: 1.60,
+				wingSpan: 19.00,
+				speedLimit: 4.00,
+				separation: 58.00,
+				alignment: 40.00,
+				cohesion: 59.00,
+				quantity: 3.00,
+				backgroundAlpha: 0.0
 			})
+			setTimeout(() => {
+				const main = document.querySelector('main')
+				main.style.opacity = 1
+				main.style.filter= 'blur(0px)'
+			}, 1000)
+			
 		})
 	</script>
 </head>
